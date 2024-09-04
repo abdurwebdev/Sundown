@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#goeey {
+  filter: blur(10px);
+}
+
+#box1 {
+  filter: blur(10px);
+  animation-name: anime;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes anime {
+  from {
+    transform: translate(-10%, -10%);
+  }
+
+  to {
+    transform: translate(10%, 10%);
+  }
+}
+
+#box2 {
+  filter: blur(10px);
+  animation-name: anime2;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes anime2 {
+  from {
+    transform: translate(10%, -10%);
+  }
+
+  to {
+    transform: translate(-10%, 10%);
+  }
+}
+
+.hello {
+  filter: blur(10px);
+  position: absolute;
+  width: 40vw;
+  height: 40vw;
+  background: linear-gradient(to top left, #FF330A, #fb7d2a);
+  border-radius: 50%;
+  top: 50%;
+  left: 20%;
+  animation-name: animethree;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes animethree {
+  from {
+    transform: translate(10%, -10%) skew(0);
+  }
+
+  to {
+    transform: translate(-10%, 10%) skew(10deg);
+  }
+}
+
+.elem {
+  overflow: hidden;
+  transition: all ease 0.5s;
+}
+
+.elem:hover .overlay {
+  top: 0;
+  transition: all ease 0.5s;
+}
+
+.elem:hover h1 {
+  position: relative;
+  z-index: 99;
+  color: #fff;
+}
+
+#loader h1 {
+  color: transparent;
+  opacity: 0;
+  background: linear-gradient(to left, orange, orangered);
+  -webkit-background-clip: text;
+}
+
+#loader h1:nth-child(1) {
+  animation: anime 1s linear;
+}
+
+#loader h1:nth-child(2) {
+  animation: anime 1s linear 1.5s;
+}
+
+#loader h1:nth-child(3) {
+  animation: anime 1s linear 3s;
+}
+
+@keyframes anime {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.swiper {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5vw 5vw;
+}
+
+.swiper-slide {
+  border-left: 1px solid #6f6d6d;
+  padding-left: 3vw;
+}
